@@ -1,4 +1,6 @@
 /target/
+/server/uploads/*
+/test/
 samples/*.rdf
 *.swp
 pom.xml.tag

@@ -1,0 +1,13 @@
+
+status();
+RDF_GLOBAL_RESET ();
+status();
+ld_dir ('/tmp/server/uploads/', '*.ttl.gz', 'http://tbx2rdf.lider-project.eu/');
+DB.DBA.rdf_loader_run ();
+checkpoint;
+status();
+DB.DBA.SPARQL_SELECT_KNOWN_GRAPHS();
+VT_INC_INDEX_DB_DBA_RDF_OBJ ();
+checkpoint;
+status();
+
